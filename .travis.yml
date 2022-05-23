@@ -10,8 +10,8 @@ env:
 
 script:
   - docker run soosio/dast
-                    --clientId=SOOS_CLIENT_ID
-                    --apiKey=SOOS_API_KEY 
+                    --clientId=$SOOS_CLIENT_ID 
+                    --apiKey=$SOOS_API_KEY
                     --projectName=selene-travis-dast
                     --scanMode=baseline
                     --apiURL=https://qa-api.soos.io/api/
