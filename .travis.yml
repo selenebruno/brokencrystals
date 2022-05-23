@@ -1,0 +1,18 @@
+os: linux
+services: docker
+
+env:
+  global:
+    - PROJECT_NAME: selene-travis-dast
+    - SCAN_MODE: baseline
+    - API_URL: https://qa-api.soos.io/api/
+    - TARGET_URL: https://brokencrystals.com/
+
+script:
+  - docker run soosio/dast
+                    --clientId=SOOS_CLIENT_ID
+                    --apiKey=SOOS_API_KEY 
+                    --projectName=selene-travis-dast
+                    --scanMode=baseline
+                    --apiURL=https://qa-api.soos.io/api/
+                    https://brokencrystals.com/
