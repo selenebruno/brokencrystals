@@ -1,12 +1,12 @@
 version: 2.1
 
 orbs: 
-  dast: soos-io/dast@1.0.1
+  soos: soos-io/dast@1.0.1
 
 workflows:
   main:
     jobs:
-      - dast/analysis_run_and_wait:
+      - soos/analysis_run_and_wait:
           client_id: ${SOOS_CLIENT_ID}
           api_key: ${SOOS_API_KEY}
           project_name: "selene-circleci-dast"
