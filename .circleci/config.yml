@@ -11,3 +11,4 @@ workflows:
           api_key: SOOS_API_KEY
           project_name: "selene-circleci-dast"
           api_base_url: 'https://qa-api.soos.io/api/'
+          target_url: 'https://brokencrystals.com/'
