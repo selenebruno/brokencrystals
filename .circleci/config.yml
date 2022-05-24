@@ -7,7 +7,7 @@ workflows:
   main:
     jobs:
       - dast/dast-analysis:
-          client_id: ${SOOS_CLIENT_ID}
-          api_key: ${SOOS_API_KEY}
+          client_id: '${SOOS_CLIENT_ID}'
+          api_key: '${SOOS_API_KEY}'
           project_name: "selene-circleci-dast"
           api_base_url: 'https://qa-api.soos.io/api/'
